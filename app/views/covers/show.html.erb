@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @cover.book %>
+</p>
+
+<p>
+  <strong>Smalllink:</strong>
+  <%= @cover.smallLink %>
+</p>
+
+<p>
+  <strong>Mediumlink:</strong>
+  <%= @cover.mediumLink %>
+</p>
+
+<p>
+  <strong>Largelink:</strong>
+  <%= @cover.largeLink %>
+</p>
+
+<%= link_to 'Edit', edit_cover_path(@cover) %> |
+<%= link_to 'Back', covers_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @identifier.type %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @identifier.number %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @identifier.book %>
+</p>
+
+<%= link_to 'Edit', edit_identifier_path(@identifier) %> |
+<%= link_to 'Back', identifiers_path %>

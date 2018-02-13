@@ -1,0 +1,37 @@
+<%= form_with(model: cover, local: true) do |form| %>
+  <% if cover.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cover.errors.count, "error") %> prohibited this cover from being saved:</h2>
+
+      <ul>
+      <% cover.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id, id: :cover_book_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smallLink %>
+    <%= form.text_field :smallLink, id: :cover_smallLink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mediumLink %>
+    <%= form.text_field :mediumLink, id: :cover_mediumLink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :largeLink %>
+    <%= form.text_field :largeLink, id: :cover_largeLink %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

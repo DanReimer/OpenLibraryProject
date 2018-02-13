@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  publishDate: MyString
+  numberOfPages: 1
+  byStatement: MyString
+
+two:
+  publishDate: MyString
+  numberOfPages: 1
+  byStatement: MyString
