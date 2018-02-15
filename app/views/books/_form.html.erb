@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :publishDate %>
-    <%= form.text_field :publishDate, id: :book_publishDate %>
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :book_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :authors %>
+    <%= form.text_field :authors, id: :book_authors %>
   </div>
 
   <div class="field">
     <%= form.label :numberOfPages %>
-    <%= form.number_field :numberOfPages, id: :book_numberOfPages %>
+    <%= form.text_field :numberOfPages, id: :book_numberOfPages %>
   </div>
 
   <div class="field">
-    <%= form.label :byStatement %>
-    <%= form.text_field :byStatement, id: :book_byStatement %>
+    <%= form.label :cover %>
+    <%= form.text_field :cover, id: :book_cover %>
   </div>
 
   <div class="actions">

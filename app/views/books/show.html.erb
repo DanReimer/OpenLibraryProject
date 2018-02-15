@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Publishdate:</strong>
-  <%= @book.publishDate %>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Authors:</strong>
+  <%= @book.authors %>
 </p>
 
 <p>
@@ -11,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Bystatement:</strong>
-  <%= @book.byStatement %>
+  <strong>Cover:</strong>
+  <%= @book.cover %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
