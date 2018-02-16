@@ -13,7 +13,7 @@
 
   <tbody>
     <% @authors.each do |author| %>
-      <tr>
+      <tr data-link="<%= author_path(author) %>">
         <td><%= author.name %></td>
         <td><%= author.books.size %></td>
         <td><%= link_to 'Show', author %></td>

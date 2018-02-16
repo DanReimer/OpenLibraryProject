@@ -12,4 +12,12 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery3
+//= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+    $("tr[data-link]").on("click", function () {
+        window.location = $(this).data("link")
+    });
+});
