@@ -5,10 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Cover</th>
       <th>Title</th>
       <th>Authors</th>
       <th>Numberofpages</th>
-      <th>Cover</th>
+      <th>Publish Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +17,11 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
+        <td><%= image_tag book.cover.smallLink %></td>
         <td><%= book.title %></td>
-        <td><%= book.authors %></td>
+        <td><%= book.authors.map { |a| a.name } * ", " %></td>
         <td><%= book.numberOfPages %></td>
-        <td><%= book.cover %></td>
+        <td><%= book.publishDate %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

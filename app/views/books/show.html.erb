@@ -1,23 +1,40 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @book.title %></h1>
+
 <p>
-  <strong>Title:</strong>
-  <%= @book.title %>
+  <strong>Cover:</strong>
+  <div>
+    <%= image_tag @book.cover.largeLink %>
+  </div>
 </p>
 
 <p>
   <strong>Authors:</strong>
-  <%= @book.authors %>
+  <ul>
+      <% @book.authors.each do |author| %>
+        <li><%= link_to author.name, author_path(author)%></li>
+      <% end %>
+  </ul>
 </p>
 
 <p>
-  <strong>Numberofpages:</strong>
+  <strong>Identifiers</strong>
+  <ul>
+    <% @book.identifiers.each do |ids| %>
+      <li><strong><%= ids.idType %>:</strong> <%= ids.number %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Number of pages:</strong>
   <%= @book.numberOfPages %>
 </p>
 
 <p>
-  <strong>Cover:</strong>
-  <%= @book.cover %>
+  <strong>Publish Date</strong>
+  <%= @book.publishDate %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
