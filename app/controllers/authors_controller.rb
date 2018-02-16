@@ -12,6 +12,7 @@ class AuthorsController < ApplicationController
   def show
   end
 
+=begin
   # GET /authors/new
   def new
     @author = Author.new
@@ -60,6 +61,7 @@ class AuthorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+=end
 
   private
     # Use callbacks to share common setup or constraints between actions.

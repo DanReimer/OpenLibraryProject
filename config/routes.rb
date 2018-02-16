@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  resources :covers
-  resources :identifiers
   resources :authors
   resources :books
 
