@@ -16,7 +16,7 @@
 
   <tbody>
     <% @books.each do |book| %>
-      <tr>
+      <tr data-link="<%= book_path(book) %>">
         <td><%= image_tag book.cover.smallLink %></td>
         <td><%= book.title %></td>
         <td><%= book.authors.map { |a| a.name } * ", " %></td>

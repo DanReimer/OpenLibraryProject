@@ -16,8 +16,8 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function() {
+$(document).on("turbolinks:load", function() {
     $("tr[data-link]").on("click", function () {
-        window.location = $(this).data("link")
+        Turbolinks.visit($(this).data("link"))
     });
 });

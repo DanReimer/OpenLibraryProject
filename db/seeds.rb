@@ -16,7 +16,7 @@ Book.destroy_all
 file = File.read('apiData/openlibrary_data.json')
 openlibrary_data = JSON.parse(file)
 
-openlibrary_data.each do |item|
+openlibrary_data.each_with_index do |item, i|
   new_book = Book.create!(title: item['title'],
                           publishDate: item['publish_date'],
                           numberOfPages: item['number_of_pages'],
@@ -38,4 +38,5 @@ openlibrary_data.each do |item|
                         largeLink: cover_links['large'])
 
   new_book.save!
+  puts i
 end
